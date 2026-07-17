@@ -1,0 +1,7 @@
+Asset name: 3_5_VialPlate
+Original source URL: https://3d.nih.gov/entries/3DPX-000429
+Original author / owner: ChoderaLab; design credited to Julie Behr
+Original license: Public Domain; packaged as CC0-1.0-Universal
+Attribution required: no; source citation retained
+Redistribution status: public domain/no copyright according to the NIH 3D record; packaged as CC0-1.0-Universal
+Matterix modification note: Promoted to USD with millimetre scale, simplified collision, semantic tags, and canonical holder-hole frames.

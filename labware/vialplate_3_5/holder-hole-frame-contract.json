@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "asset_name": "3_5_vialplate_free_standing",
+  "contract_status": "authored_candidate_contract",
+  "units": "m",
+  "holder_root": {
+    "name": "VialHolder",
+    "origin": "visual_base_center",
+    "operating_axes": {
+      "x": "positive holder X (operator left from the front)",
+      "y": "front, toward robot and review camera",
+      "z": "up, out of every vial opening"
+    },
+    "raw_to_operating": {
+      "raw_units": "mm",
+      "formula": [
+        "x_m = raw_x_mm * 0.001",
+        "y_m = -raw_z_mm * 0.001",
+        "z_m = (raw_y_mm + 19.175) * 0.001"
+      ],
+      "orientation_wxyz": [0.70710678, 0.70710678, 0.0, 0.0]
+    }
+  },
+  "reference_heights_m": {
+    "visual_base": 0.0,
+    "well_floor": 0.003,
+    "opening_plane": 0.03835,
+    "nominal_vial_bottom_at_30mm_insertion": 0.00835
+  },
+  "frame_orientation_wxyz": [1.0, 0.0, 0.0, 0.0],
+  "frame_axis_contract": {
+    "outward_axis_local": [0.0, 0.0, 1.0],
+    "insertion_axis_local": [0.0, 0.0, -1.0],
+    "reference_point": "well-opening center on opening_plane"
+  },
+  "naming_contract": {
+    "frame_pattern": "hole_{row}_{column}",
+    "row_order_front_to_back": ["front", "middle", "back"],
+    "column_order_operator_left_to_right": ["left", "mid_left", "center", "mid_right", "right"],
+    "front_definition": "positive holder Y; nearest the robot at world origin and the review camera",
+    "left_definition": "positive holder X when viewed by an operator standing at the front"
+  },
+  "frames": [
+    {"name": "hole_front_right", "row": "front", "column": "right", "position_m": [-0.04591, 0.023, 0.03835], "raw_center_mm": [-45.91, -23.0]},
+    {"name": "hole_front_mid_right", "row": "front", "column": "mid_right", "position_m": [-0.02307, 0.023, 0.03835], "raw_center_mm": [-23.07, -23.0]},
+    {"name": "hole_front_center", "row": "front", "column": "center", "position_m": [0.0, 0.023, 0.03835], "raw_center_mm": [0.0, -23.0]},
+    {"name": "hole_front_mid_left", "row": "front", "column": "mid_left", "position_m": [0.02307, 0.023, 0.03835], "raw_center_mm": [23.07, -23.0]},
+    {"name": "hole_front_left", "row": "front", "column": "left", "position_m": [0.04591, 0.023, 0.03835], "raw_center_mm": [45.91, -23.0]},
+    {"name": "hole_middle_right", "row": "middle", "column": "right", "position_m": [-0.04591, 0.0, 0.03835], "raw_center_mm": [-45.91, 0.0]},
+    {"name": "hole_middle_mid_right", "row": "middle", "column": "mid_right", "position_m": [-0.02307, 0.0, 0.03835], "raw_center_mm": [-23.07, 0.0]},
+    {"name": "hole_middle_center", "row": "middle", "column": "center", "position_m": [0.0, 0.0, 0.03835], "raw_center_mm": [0.0, 0.0]},
+    {"name": "hole_middle_mid_left", "row": "middle", "column": "mid_left", "position_m": [0.02307, 0.0, 0.03835], "raw_center_mm": [23.07, 0.0]},
+    {"name": "hole_middle_left", "row": "middle", "column": "left", "position_m": [0.04591, 0.0, 0.03835], "raw_center_mm": [45.91, 0.0]},
+    {"name": "hole_back_right", "row": "back", "column": "right", "position_m": [-0.04591, -0.023, 0.03835], "raw_center_mm": [-45.91, 23.0]},
+    {"name": "hole_back_mid_right", "row": "back", "column": "mid_right", "position_m": [-0.02307, -0.023, 0.03835], "raw_center_mm": [-23.07, 23.0]},
+    {"name": "hole_back_center", "row": "back", "column": "center", "position_m": [0.0, -0.023, 0.03835], "raw_center_mm": [0.0, 23.0]},
+    {"name": "hole_back_mid_left", "row": "back", "column": "mid_left", "position_m": [0.02307, -0.023, 0.03835], "raw_center_mm": [23.07, 23.0]},
+    {"name": "hole_back_left", "row": "back", "column": "left", "position_m": [0.04591, -0.023, 0.03835], "raw_center_mm": [45.91, 23.0]}
+  ],
+  "initial_dynamic_vial_set": {
+    "pick_vial": "hole_middle_center",
+    "witness_vials": ["hole_middle_mid_right", "hole_middle_mid_left", "hole_middle_left"],
+    "rationale": "Preserves the verified middle-row inspection locations and gives the first grasp target the centered, least asymmetric hole."
+  },
+  "validation_contract": {
+    "source_measurements": {
+      "well_centers_raw_x_mm": [-45.91, -23.07, 0.0, 23.07, 45.91],
+      "well_centers_raw_z_mm": [-23.0, 0.0, 23.0],
+      "raw_opening_y_mm": 19.175,
+      "raw_floor_y_mm": -16.175,
+      "raw_visual_min_y_mm": -19.175
+    },
+    "required_checks": [
+      "exactly 15 unique names and 15 unique XY center pairs",
+      "inverse operating transform reproduces every raw center within 0.01 mm",
+      "each visual-mesh centerline ray from raw +Y first reaches the well floor at -16.175 mm within 0.01 mm",
+      "each frame center is within 0.01 mm of its corresponding regenerated compound-proxy well center",
+      "opening axis is +Z and insertion motion is -Z within 0.1 degrees"
+    ]
+  }
+}

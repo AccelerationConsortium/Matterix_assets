@@ -1,0 +1,12 @@
+Matterix 3_5 Vial Holder asset
+=============================
+
+The NIH 3D 3DPX-000429 record labels this holder Public Domain. The Matterix
+package represents that no-copyright/public-domain status with CC0 1.0
+Universal.
+
+SPDX-License-Identifier: CC0-1.0
+License URL: https://creativecommons.org/publicdomain/zero/1.0/
+
+Source: https://3d.nih.gov/entries/3DPX-000429
+Creator credit in source record: ChoderaLab; design credited to Julie Behr.
