@@ -1,0 +1,31 @@
+{
+  "slug": "corning-4980-50",
+  "source": "corning-4980-50.usda InterfaceFrames",
+  "frames": {
+    "base": [
+      -0.0,
+      -0.0,
+      -0.039
+    ],
+    "opening": [
+      -0.0,
+      -0.0,
+      0.039
+    ],
+    "grasp": [
+      -0.0,
+      -0.0,
+      0.031
+    ],
+    "pre_grasp": [
+      -0.0,
+      -0.0,
+      0.069
+    ],
+    "post_grasp": [
+      -0.0,
+      -0.0,
+      0.079
+    ]
+  }
+}
