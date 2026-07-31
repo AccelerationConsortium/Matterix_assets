@@ -23,8 +23,8 @@ manufacturer specifications.
 
 This asset is not derived from, supplied by, or endorsed by Corning. Corning,
 PYREX, and catalog number 4980-50 are used solely to identify the modeled
-product. Geometry was authored by us from published dimensions and is offered
-under whatever license the upstream Matterix_assets repository specifies.
+product. Geometry was authored as a Steven Zhang-directed, AI-assisted Matterix
+reconstruction. Licensing is stated below.
 
 ## Geometry
 
@@ -39,3 +39,23 @@ cavity-aware `convexDecomposition` collision (64 hulls); the vessel passes the
 drop-and-settle check, the probe sphere settles inside the open cavity, and the
 Matterix interaction smoke records both finger contacts. The collision
 approximation preserves an open cavity but is not an exact interior surface.
+
+## License and attribution
+
+Declared rights holder and licensor: Steven Zhang, solely to the extent that
+copyright or similar rights exist in the licensed material and Steven Zhang
+owns or has authority to license those rights.
+
+This authored payload is licensed under the Creative Commons Attribution 4.0
+International license (CC BY 4.0; SPDX: `CC-BY-4.0`):
+https://creativecommons.org/licenses/by/4.0/legalcode
+
+Required attribution: “Matterix Batch 1 rigid-labware assets — © 2026 Steven
+Zhang, licensed under CC BY 4.0.” A reasonable equivalent may identify Steven
+Zhang, link to CC BY 4.0, and indicate changes.
+
+This license applies only to rights Steven Zhang has authority to license in
+the authored geometry, USD, meshes, materials, frames, and metadata. It does
+not license manufacturer pages, drawings, photographs, standards, names,
+brands, trademarks, patents, trade dress, or other third-party rights. No
+manufacturer endorsement or affiliation is claimed.

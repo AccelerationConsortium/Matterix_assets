@@ -31,3 +31,23 @@ The fixed-joint assembly is intended for the same direct two-body runtime path
 as the DURAN capped payloads. Matterix's generic `RigidObject` scene wrapper
 currently requires one rigid body per entity; a capped-specific scene adapter
 is therefore still pending for interaction-smoke qualification.
+
+## License and attribution
+
+Declared rights holder and licensor: Steven Zhang, solely to the extent that
+copyright or similar rights exist in the licensed material and Steven Zhang
+owns or has authority to license those rights.
+
+This authored payload is licensed under the Creative Commons Attribution 4.0
+International license (CC BY 4.0; SPDX: `CC-BY-4.0`):
+https://creativecommons.org/licenses/by/4.0/legalcode
+
+Required attribution: “Matterix Batch 1 rigid-labware assets — © 2026 Steven
+Zhang, licensed under CC BY 4.0.” A reasonable equivalent may identify Steven
+Zhang, link to CC BY 4.0, and indicate changes.
+
+This license applies only to rights Steven Zhang has authority to license in
+the authored geometry, USD, meshes, materials, frames, and metadata. It does
+not license manufacturer pages, drawings, photographs, standards, names,
+brands, trademarks, patents, trade dress, or other third-party rights. No
+manufacturer endorsement or affiliation is claimed.
