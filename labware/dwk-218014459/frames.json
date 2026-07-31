@@ -1,0 +1,62 @@
+{
+  "slug": "dwk-218014459",
+  "source": "dwk-218014459.usda Bottle/Cap InterfaceFrames",
+  "frames": {
+    "base": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "opening": [
+      0.0,
+      0.0,
+      0.176
+    ],
+    "grasp": [
+      0.0,
+      0.0,
+      0.145
+    ],
+    "pre_grasp": [
+      0.0,
+      0.0,
+      0.231
+    ],
+    "post_grasp": [
+      0.0,
+      0.0,
+      0.241
+    ],
+    "cap_mate": [
+      0.0,
+      0.0,
+      0.156
+    ],
+    "cap_grasp": [
+      0.0,
+      0.0,
+      0.1685
+    ]
+  },
+  "body_frames": {
+    "Bottle": {
+      "CapMateFrame": [
+        0.0,
+        0.0,
+        0.068
+      ]
+    },
+    "Cap": {
+      "CapMateFrame": [
+        0.0,
+        0.0,
+        -0.0125
+      ],
+      "CapGraspFrame": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  }
+}
